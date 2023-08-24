@@ -2,18 +2,6 @@
 DATA LOGGER Sensor BME280 con MySQL y MQTT.
 
 Se usa un esp8266 que toma muestra de la temperatura cada cierto tiempo. Los datos se publican en un servidor MQTT y también se llevan a una tabla de mysql.
-La tabla de mysql donde se recogen los datos:
-
-MariaDB [iot]> describe  iot.sensor1;
-+-------------+----------+------+-----+---------+-------+
-| Field       | Type     | Null | Key | Default | Extra |
-+-------------+----------+------+-----+---------+-------+
-| fecha       | datetime | NO   | PRI | NULL    |       |
-| presion     | int(11)  | YES  |     | NULL    |       |
-| temperatura | float    | YES  |     | NULL    |       |
-| humedad     | float    | YES  |     | NULL    |       |
-+-------------+----------+------+-----+---------+-------+
-4 rows in set (0,007 sec)
 
 Para crear la tabla:
 create database iot;
